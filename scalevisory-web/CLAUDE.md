@@ -46,6 +46,17 @@ so never hardcode the host anywhere else.
 Contact mailbox is `info@scalevisory.in`, still pending DNS verification (decision #5).
 Open: whether the firm also owns `scalevisory.com` and wants it 301'd to `.in` — ask before configuring it.
 
+## Logo
+Official artwork, owner-supplied — the placeholder SVG mark is gone. `src/components/Logo.tsx` renders
+`public/logo.png` (full colour, for light grounds) or `public/logo-white.png` (all white, for navy grounds via the
+`light` prop). Both are transparent PNGs, trimmed to the artwork and derived from the owner's master file; the source
+had a solid near-white background, which was keyed out.
+The lockup already contains the wordmark, "Accounting | Taxation | Legal" and the tagline, so **never set text beside
+it** and never repeat the tagline directly under it.
+`public/icon.png` (512px) and `src/app/favicon.ico` are the mark alone, cropped from the same artwork.
+The lockup is ~4.8:1 and much wider than the old mark: the desktop nav is held back to `xl` because of it, so
+re-check the header at 1280px before adding any nav item.
+
 ## Brand (apply exactly)
 Navy #073574, sky #10A9E8, off-white #F8FAFC. Montserrat (headings) + Inter (body). Premium corporate tone, no stock-photo clichés, no cartoon icons. Office: G-59, VIP Plaza, VIP Road, Vesu, Surat – 395007. Phone/WhatsApp: +91 99099 93565. "12+ years" in messaging.
 
@@ -74,7 +85,7 @@ Env: copy `.env.example` → `.env.local`
    is worded as "coordinated through empanelled advocates". Advocate names are `[PLACEHOLDER — owner to confirm]`.
    Legal Service Disclaimer must state this distinction.
 5. **Email / logo / content**: sender `info@scalevisory.in` pending DNS verification (use as placeholder in Settings);
-   logo stays the SVG mark in `src/components/Logo.tsx` until owner supplies files; testimonials, team, FAQs,
+   logo — DONE, owner supplied the official artwork (see Logo below); testimonials, team, FAQs,
    credentials are empty-by-default and hidden until filled from admin.
 6. `/travel-agency-accounting` = the canonical SEO landing; `/industries/travel-agencies` redirects (301) to it.
 7. Admin "website visitors" = link to GA4, not an API integration.

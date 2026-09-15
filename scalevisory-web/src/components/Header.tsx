@@ -11,24 +11,24 @@ export default function Header() {
   const path = usePathname();
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur">
-      <div className="wrap flex h-16 items-center justify-between">
-        <Logo />
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
+      <div className="wrap flex h-20 items-center justify-between gap-6">
+        <Logo className="h-10 md:h-11" />
+        <nav className="hidden items-center gap-5 xl:flex" aria-label="Main">
           {nav.map((n) => (
             <Link
               key={n.href}
               href={n.href}
               target={n.external ? "_blank" : undefined}
               rel={n.external ? "noopener noreferrer" : undefined}
-              className={`text-sm font-medium no-underline hover:text-navy ${!n.external && path.startsWith(n.href) ? "text-navy border-b-2 border-sky pb-0.5" : "text-muted"}`}
+              className={`whitespace-nowrap text-sm font-medium no-underline hover:text-navy ${!n.external && path.startsWith(n.href) ? "text-navy border-b-2 border-sky pb-0.5" : "text-muted"}`}
             >
               {n.label}
             </Link>
           ))}
-          <a href={`tel:${site.phoneRaw}`} className="btn-primary !py-2">Call {site.phone}</a>
+          <a href={`tel:${site.phoneRaw}`} className="btn-primary whitespace-nowrap !px-4 !py-2">{site.phone}</a>
         </nav>
         <button
-          className="lg:hidden rounded-md border border-line p-2 text-navy"
+          className="rounded-md border border-line p-2 text-navy xl:hidden"
           aria-expanded={open}
           aria-label="Toggle menu"
           onClick={() => setOpen(!open)}
@@ -39,7 +39,7 @@ export default function Header() {
         </button>
       </div>
       {open && (
-        <nav className="wrap flex flex-col gap-1 border-t border-line pb-4 pt-2 lg:hidden" aria-label="Mobile">
+        <nav className="wrap flex flex-col gap-1 border-t border-line pb-4 pt-2 xl:hidden" aria-label="Mobile">
           {nav.map((n) => (
             <Link key={n.href} href={n.href} target={n.external ? "_blank" : undefined} rel={n.external ? "noopener noreferrer" : undefined} onClick={() => setOpen(false)} className="rounded-md px-2 py-2.5 text-base font-medium text-navy no-underline hover:bg-navy-soft">
               {n.label}

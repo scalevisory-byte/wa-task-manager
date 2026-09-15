@@ -10,10 +10,10 @@ export default function Footer() {
     <footer className="bg-navy-deep text-white/80">
       <div className="wrap grid gap-10 py-14 md:grid-cols-12">
         <div className="md:col-span-4">
-          <Logo light />
+          <Logo light className="h-14" />
           <p className="mt-4 max-w-sm text-sm leading-7">
-            {site.tagline}. Accounting, taxation, legal and business consultancy for businesses in Surat and across
-            Gujarat — {site.years} years of it.
+            Accounting, taxation, legal and business consultancy for businesses in Surat and across Gujarat —
+            {site.years} years of it.
           </p>
           <div className="mt-5 flex flex-wrap gap-3 text-sm">
             <a className="btn-sky !py-2" href={whatsappLink("Hi Scale Visory, I have a query.")}>WhatsApp us</a>
