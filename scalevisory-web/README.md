@@ -32,8 +32,8 @@ Admin: http://localhost:3000/admin/login
 ### 4. Deploy (Vercel — free)
 1. Code GitHub pe push karo.
 2. vercel.com → Import repo → Environment Variables mein `.env.local` ki saari keys daalo → Deploy.
-3. Domain (scalevisory.com) Vercel mein add karo, DNS point karo.
-4. Google Search Console mein `https://scalevisory.com/sitemap.xml` submit karo.
+3. Domain (scalevisory.in) Vercel mein add karo, DNS point karo — apex aur www dono.
+4. Google Search Console mein `https://scalevisory.in/sitemap.xml` submit karo.
 
 ## Admin panel (`/admin`)
 - **Inquiries** — saare forms (Contact / Service / Training) yahan aate hain; Mark read, WhatsApp, Call.

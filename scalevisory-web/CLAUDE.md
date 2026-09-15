@@ -38,6 +38,14 @@ disclosure). There is no patched 14.x stable — the fix is a 14 -> 16 major upg
 `docs/PLATFORM-PLAN.md` is the source of truth: sitemap, 4 core services (Accounting, Taxation, Legal, Business Consultancy), industries, resources (5 categories), consultation form → lead management, RBAC admin CMS, SEO, security, infra, V2 client portal, V3 AI.
 Open decisions are in §17 of that doc — ask before implementing anything that depends on them.
 
+## Domain
+**`scalevisory.in`** is the live domain (owner-confirmed) — not `.com`, which earlier drafts of this file and
+PLATFORM-PLAN assumed. It lives in one place: `site.url` in `src/lib/content/site.ts`, overridable with
+`NEXT_PUBLIC_SITE_URL`. That single value drives canonicals, sitemap.xml, robots.txt, breadcrumbs and all JSON-LD,
+so never hardcode the host anywhere else.
+Contact mailbox is `info@scalevisory.in`, still pending DNS verification (decision #5).
+Open: whether the firm also owns `scalevisory.com` and wants it 301'd to `.in` — ask before configuring it.
+
 ## Brand (apply exactly)
 Navy #073574, sky #10A9E8, off-white #F8FAFC. Montserrat (headings) + Inter (body). Premium corporate tone, no stock-photo clichés, no cartoon icons. Office: G-59, VIP Plaza, VIP Road, Vesu, Surat – 395007. Phone/WhatsApp: +91 99099 93565. "12+ years" in messaging.
 
@@ -65,7 +73,7 @@ Env: copy `.env.example` → `.env.local`
 4. **Legal scope**: Legal pages describe advisory and documentation services only. Court/tribunal/authority representation
    is worded as "coordinated through empanelled advocates". Advocate names are `[PLACEHOLDER — owner to confirm]`.
    Legal Service Disclaimer must state this distinction.
-5. **Email / logo / content**: sender `info@scalevisory.com` pending DNS verification (use as placeholder in Settings);
+5. **Email / logo / content**: sender `info@scalevisory.in` pending DNS verification (use as placeholder in Settings);
    logo stays the SVG mark in `src/components/Logo.tsx` until owner supplies files; testimonials, team, FAQs,
    credentials are empty-by-default and hidden until filled from admin.
 6. `/travel-agency-accounting` = the canonical SEO landing; `/industries/travel-agencies` redirects (301) to it.

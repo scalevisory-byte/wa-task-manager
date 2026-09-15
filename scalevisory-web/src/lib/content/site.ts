@@ -3,10 +3,10 @@ export const site = {
   tagline: "Balancing The Unbalanced",
   description:
     "Scale Visory is a Surat-based accounting, taxation, compliance and business advisory firm with 12+ years of experience. Bookkeeping, GST, income tax, audit and a practical accounts training institute.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://scalevisory.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://scalevisory.in",
   phone: "+91 99099 93565",
   phoneRaw: "919909993565",
-  email: "info@scalevisory.com",
+  email: "info@scalevisory.in",
   address: "G-59, VIP Plaza, VIP Road, Vesu, Surat – 395007, Gujarat",
   mapsQuery: "VIP Plaza, VIP Road, Vesu, Surat 395007",
   hours: [

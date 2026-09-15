@@ -247,7 +247,7 @@ Cross-cutting: zod validation on every action; typed `ActionResult<T>`; central 
 ## 9. Infrastructure architecture
 
 ```
-Domain (scalevisory.com)
+Domain (scalevisory.in)
  └─ DNS: Cloudflare (proxy on) → CDN + WAF + DDoS + SSL
      └─ Vercel (Next.js, Mumbai edge/functions region bom1)
           ├─ Supabase (Postgres, Auth, Storage) — ap-south-1 Mumbai
@@ -371,7 +371,7 @@ Route group `app/admin/(shell)` with sidebar nav generated from a `adminModules`
 4. **Legal practice scope.** Who on the team is a qualified advocate? Legal page wording and the Legal Service Disclaimer depend on this; content must not imply representation the firm can't provide. **Provide.**
 5. **`/travel-agency-accounting` vs `/industries/travel-agencies`.** Both requested; recommend one canonical (industries page) with the short URL as a 301 or a distinct SEO landing with different intent (accounting-only). **Choose.**
 6. **Content ownership.** Real testimonials, team names/photos, credentials, FAQs, legal page text — none will be invented; site ships with placeholders hidden until filled. **Owner + deadline.**
-7. **Email domain & sender.** `info@scalevisory.com` unverified; Resend needs DNS records. **Confirm domain and mailbox.**
+7. **Email domain & sender.** RESOLVED: the domain is `scalevisory.in`, so the sender is `info@scalevisory.in`. Mailbox still unverified; Resend needs DNS records (SPF/DKIM) on `.in`. **Confirm mailbox exists.**
 8. **WhatsApp Business API.** Requires Meta Business verification and a BSP; number 9909993565 is used across ventures — using it for API may conflict with the WhatsApp Business app on the same number. **Decide number strategy before V3.**
 9. **GA4 "website visitors" in admin.** Recommend linking to GA4 rather than pulling via API (needs OAuth service account + quota). **Confirm.**
 10. **Hosting spend.** Vercel Pro (~$20/mo), Supabase Pro (~$25/mo) for backups/PITR/MFA, Cloudflare free, Resend free tier, Upstash free tier, Sentry free tier. **Approve.**

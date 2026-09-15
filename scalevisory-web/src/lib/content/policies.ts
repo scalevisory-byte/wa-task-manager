@@ -14,7 +14,7 @@ export interface Policy {
 }
 
 const CONTACT_LINE =
-  "Questions about this page, or a request relating to your own data, go to info@scalevisory.com or +91 99099 93565.";
+  "Questions about this page, or a request relating to your own data, go to info@scalevisory.in or +91 99099 93565.";
 
 export const policies: Policy[] = [
   {
@@ -22,7 +22,7 @@ export const policies: Policy[] = [
     title: "Privacy policy",
     lead: "What this website collects, why, how long it is kept and how to have it removed.",
     description:
-      "How Scale Visory collects, uses, stores and deletes personal information submitted through scalevisory.com.",
+      "How Scale Visory collects, uses, stores and deletes personal information submitted through scalevisory.in.",
     sections: [
       {
         heading: "What we collect",
@@ -80,7 +80,7 @@ export const policies: Policy[] = [
     slug: "terms",
     title: "Terms of use",
     lead: "The terms on which this website is provided.",
-    description: "Terms of use for scalevisory.com — scope, accuracy, third-party links and applicable law.",
+    description: "Terms of use for scalevisory.in — scope, accuracy, third-party links and applicable law.",
     sections: [
       {
         heading: "About this site",
@@ -125,7 +125,7 @@ export const policies: Policy[] = [
     title: "Disclaimer",
     lead: "The limits of what is on this website, and what our legal services do and do not include.",
     description:
-      "Disclaimer for scalevisory.com — general information only, no professional advice, and the scope of legal services offered.",
+      "Disclaimer for scalevisory.in — general information only, no professional advice, and the scope of legal services offered.",
     sections: [
       {
         heading: "General information only",
