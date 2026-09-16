@@ -1,8 +1,0 @@
-node_modules
-.next
-.env*.local
-.env
-
-# build artifacts
-*.tsbuildinfo
-next-env.d.ts
